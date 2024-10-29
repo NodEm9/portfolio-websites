@@ -1,0 +1,245 @@
+:root {
+  --primary-color: #005634;
+  --tertiary-color: #008ae0;
+  --font-color: #2a2828;
+  --background-color: #000000;
+  --font-color-light: #f5f5f5;
+  --font-family: "Tahoma", sans-serif;
+} 
+
+body { 
+  container-type: inline-size;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  color: var(--font-color);
+}
+
+.page-header {
+  background: var(--background-color);
+  padding: 5px;
+  margin: 0;
+}
+
+#backBtn {
+  display: flex;
+  font-size: 1em;
+  justify-content: space-between;
+  align-items: center;
+  width: 50px;
+  height: 20px;
+  margin: 20px;
+  color: var(--font-color-light);
+  text-decoration: none;
+}
+
+#backBtn span {
+  font-size: 1.5em;
+  margin-top: -4px;
+  font-weight: bolder;
+}
+
+#backBtn:hover {
+  color: var(--tertiary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin: 40px 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 60px;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.cs-begining, .cs-middle, .cs-end {
+  display: flex;
+  gap: 20px;
+  padding: 30px 100px;
+}
+
+.cs-begining .intro, .intro-pictography {
+  width: 100%;
+  flex: 1;
+}
+
+.intro-pictography picture {
+  justify-content: flex-end;
+> img {
+  float: inline-end;
+  width: 80%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 6px 6px 10px 6px rgba(161, 161, 161, 0.75);
+}
+}
+
+.cs-title {
+  display: inline;
+  padding: 0 20px 0 100px;
+}
+
+.intro-pictography1 picture{
+  display: grid;
+  grid-template-columns: auto auto;
+  > img {
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
+    box-shadow: 6px 6px 10px 6px rgba(161, 161, 161, 0.75);
+  }
+}
+
+.cs-end {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.intro-pictography2 {
+  display: flex;
+  gap: 20px;
+  padding: -30px 100px;
+}
+
+.intro-pictography2 picture {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 6px 6px 10px 6px rgba(161, 161, 161, 0.75);
+  }
+}
+
+.cs-conclution {
+  gap: 20px;
+  padding: 30px 100px;
+}
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  margin-bottom: 0;
+  color: var(--font-color-light);
+  background: var(--primary-color);
+}
+
+.page-footer h2 {
+  font-size: calc(var(--font-size) + 1vw);
+  font-weight: var(--font-weight-bold);
+  box-shadow: var(--border-color);
+}
+
+.page-footer a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+#social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+#twitter,
+#linkedin,
+#medium,
+#github {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+}
+
+.bottom-footer {
+  padding: 16px;
+  place-items: center;
+  text-align: center;
+  color: var(--font-color-light);
+  background: var(--background-color);
+}
+
+@container (width < 40rem) {
+  main {
+    padding: 20px;
+  }
+  .cs-begining,
+  .cs-middle,
+  .cs-end {
+    flex-direction: column;
+    padding: 0;
+    gap: 10px;
+  }
+  
+  .cs-begining .intro-pictography picture {
+    justify-content: flex-start;
+   > img {
+    float: inline-start;
+    width: 100%;
+    object-fit: fill;
+   }
+  }
+
+  .cs-title {
+    padding: 0;
+  }
+
+  .cs-middle .intro-pictography1 picture {
+    gap: 10px;
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .cs-end .intro-pictography2 {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 0;
+  }
+
+  .intro-pictography2 picture {
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .cs-conclution {
+    padding: 0;
+  }
+
+  .page-footer {
+    padding: 20px;
+  }
+  .page-footer h2 {
+    font-size: calc(var(--font-size) + 0.5vw);
+  }
+  #social-icons {
+    margin: 5px;
+  }
+  #twitter,
+  #linkedin,
+  #medium,
+  #github {
+    width: 20px;
+    height: 20px;
+  }
+}
