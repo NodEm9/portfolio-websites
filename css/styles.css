@@ -9,11 +9,11 @@
   --close-button: #ff6347;
   --bg-main-color: #f5f5f5;
   --border-color: #60615eab;
-  --font-weight: 300; 
+  --font-weight: 300;
   --font-weight-bold: 700;
   --font-size: 16px;
 }
- 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -350,22 +350,28 @@ h2 {
   text-align: center;
   background: var(--primary-color);
 
+  h2 {
+    font-size: 2em;
+    color: var(--font-color-light);
+  }
+
   p {
     font-size: 1.1em;
     color: var(--font-color-light);
+
     span {
       font-weight: var(--font-weight);
     }
   }
 
-   span {
+  span {
     text-decoration: none;
     font-size: 1.1em;
     transition: transform 0.3s ease-in-out;
     font-weight: var(--font-weight-bold);
     color: var(--font-color-light);
 
-     a {
+    a {
       color: var(--font-color-light);
       text-decoration: none;
     }
@@ -465,30 +471,46 @@ h2 {
 
     /* Hero Style */
     .hero {
-      padding: 4.5em 0;
+      padding: 4.5em 1em;
       margin: 0;
 
       img {
-        width: 20%;
-        margin-top: 20px;
+        width: 30%;
+        margin-top: 30px;
       }
 
       .intro {
         flex-direction: column;
         padding: 0 10px;
+        line-height: 1.5;
 
         h1 {
+          margin-top: 0;
           font-size: 2em;
+
+          span {
+            margin-top: -30px;
+          }
         }
 
-        .button-secondary {
+        p {
+          margin-top: -10px;
+        }
+
+        .button {
+          width: 240px;
+          padding: 0.5em 0;
+        }
+
+        .button-primary {
           font-size: 1em;
-          padding: 0.5em 2em;
+          padding: 1em 3em;
 
           #icon {
             font-size: 1.5rem;
           }
         }
+
       }
     }
 
