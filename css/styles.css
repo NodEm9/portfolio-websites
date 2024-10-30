@@ -317,6 +317,7 @@ h2 {
 }
 
 .techstack h4 {
+  font-size: var(--font-size);
   font-weight: var(--font-weight-bold);
 }
 
